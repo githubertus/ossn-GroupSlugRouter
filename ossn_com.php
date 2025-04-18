@@ -52,7 +52,7 @@ function groupslugrouter_vanity_handler($pages) {
 
     $group = groupslugrouter_get_group_by_slug($slug);
     if ($group) {
-        redirect("group/{$group->guid}");
+        redirect("group/{$group->owner_guid}");
     } else {
         ossn_error_page();
     }
